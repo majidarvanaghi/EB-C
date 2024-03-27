@@ -9,11 +9,11 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import FlowbiteWrapper from "./flowbiteWrapper";
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
-
-import FlowbiteWrapper from "./flowbiteWrapper";
 
 export default function App() {
   return (
