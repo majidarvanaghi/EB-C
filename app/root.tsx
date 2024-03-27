@@ -13,6 +13,8 @@ export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
+import FlowbiteWrapper from "./flowbiteWrapper";
+
 export default function App() {
   return (
     <html lang="en">
@@ -22,12 +24,14 @@ export default function App() {
         <Meta />
         <Links />
       </head>
+      <FlowbiteWrapper>
       <body>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
+      </FlowbiteWrapper>
     </html>
   );
 }
